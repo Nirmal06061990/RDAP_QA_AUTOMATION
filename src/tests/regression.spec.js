@@ -23,7 +23,7 @@ test.describe('Regressions tests', () => {
       await page.close();
     });
   
-    test.only('should login successfully', async () => {
+    test('should login successfully', async () => {
       const obj = new generateOTP();
       const loginpage = pom.getLoginPage();
       const landingpage = pom.getLandingPage();

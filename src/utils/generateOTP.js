@@ -1,13 +1,16 @@
 const { timeout } = require('puppeteer');
 
 class generateOTP{
+
+    
     
     constructor(){
         
     }
     generateOTPAuth(){
+        const authCode = process.env.AUTH_CODE;
         const OTPAuth = require('otpauth');
-        const secretID = 'mxdfwlmlrkhk6mrf';
+        const secretID = authCode;
         
         const options = {
             secret: secretID,
